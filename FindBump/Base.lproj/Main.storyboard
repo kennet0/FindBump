@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindBump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-9V-tCf">
+                                <rect key="frame" x="55" y="662" width="30" height="30"/>
+                                <state key="normal" title="On"/>
+                                <connections>
+                                    <action selector="onUpdate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SGy-tw-6bT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GyroLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgE-gN-3Sd">
+                                <rect key="frame" x="92" y="715" width="78.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gu0-x5-U6y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="654"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="bGb-De-7z5"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxV-Hv-oV4">
+                                <rect key="frame" x="305" y="662" width="30" height="30"/>
+                                <state key="normal" title="Off"/>
+                                <connections>
+                                    <action selector="offUpdate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfp-vw-mjT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LxV-Hv-oV4" secondAttribute="bottom" constant="44" id="0Nz-1w-u1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LxV-Hv-oV4" secondAttribute="trailing" constant="79" id="LI3-wB-Qej"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a1M-9V-tCf" secondAttribute="bottom" constant="44" id="M2L-w3-mPb"/>
+                            <constraint firstAttribute="bottom" secondItem="PgE-gN-3Sd" secondAttribute="bottom" id="QHy-tJ-LcM"/>
+                            <constraint firstItem="gu0-x5-U6y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d1A-rg-GBR"/>
+                            <constraint firstItem="a1M-9V-tCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="d3P-sQ-ETh"/>
+                            <constraint firstItem="PgE-gN-3Sd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="fbC-LI-XbL"/>
+                            <constraint firstItem="gu0-x5-U6y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gE4-y9-lja"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gu0-x5-U6y" secondAttribute="trailing" id="tuI-Oc-mcW"/>
+                            <constraint firstItem="a1M-9V-tCf" firstAttribute="top" secondItem="gu0-x5-U6y" secondAttribute="bottom" constant="8" id="wRz-qn-Viu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="PgE-gN-3Sd" id="VuI-nO-83S"/>
+                        <outlet property="mapView" destination="gu0-x5-U6y" id="7NC-V3-UrC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="127.98913043478262"/>
+        </scene>
+    </scenes>
+</document>
